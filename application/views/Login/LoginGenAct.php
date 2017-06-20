@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('Acceso directo no disponible');
 							<label for="">
 								Contraseña
 							</label>
-							<input type="text" id="pass" class="form-control" placeholder="Contraseña">
+							<input type="password" id="pass" class="form-control" placeholder="Contraseña">
 						</div>
 						<div class="form-group center-block text-center">
 							<button type="button" class="btn btn-success" id="btnIngresar">
@@ -40,6 +40,13 @@ defined('BASEPATH') OR exit('Acceso directo no disponible');
 							</button>
 						</div>
 					</form>
+
+					<form style="display: hidden" id="loginData" action="" method="POST">
+						<input type="hidden" id="nombreUsuarioData" name="nombreUsuarioData">
+						<input type="hidden" id="nombreIngresoData" name="nombreIngresoData">
+						<input type="hidden" id="privilegiosData" name="privilegiosData">
+					</form>
+
 				</div>
 			</div>
 		</div>
@@ -57,7 +64,7 @@ defined('BASEPATH') OR exit('Acceso directo no disponible');
 		$(document).ready(function(){
 			var base_url = '<?php echo base_url(); ?>';
 			inicio();
-			
+
 		});
 	</script>
 

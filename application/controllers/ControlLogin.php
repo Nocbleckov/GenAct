@@ -6,22 +6,26 @@ class ControlLogin extends CI_Controller
 	function __construct() {
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->model('Usuario');
 	}
 
 	public function index(){
 
-		
 		$this->load->view('Login/LoginGenAct');
-
 
 	}
 
 	public function datosIngreso(){
+		
 		$data = array(
 			'nombreUsuario'=>$this->input->post('nombreUsuario'),
 			'pass'=>$this->input->post('pass'),
 			);
-		echo json_encode($data);
+
+		$regreso = $this->Usuario->existeUsuario($data);
+
+		echo json_encode($regreso);
+		
 	}
 
 }

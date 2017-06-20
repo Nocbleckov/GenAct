@@ -1,0 +1,7 @@
+function inicio(){
+
+}
+
+function onClickBuscarAlumno(){
+	
+}

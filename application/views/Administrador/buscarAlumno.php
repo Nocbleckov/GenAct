@@ -36,4 +36,10 @@ defined('BASEPATH') OR exit('Acceso directo no disponible');
 		</button>
 	</div>
 
+	<script type="text/javascript" src="<?php echo base_url('assets/js/Administrador.js'); ?>"></script>
+
+	<script type="text/javascript">
+		inicio
+	</script>
+
 </div>

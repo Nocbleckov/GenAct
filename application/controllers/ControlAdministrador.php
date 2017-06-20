@@ -8,6 +8,7 @@ class ControlAdministrador extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->model('Alumno');
 	}
 
 	public function index(){
@@ -19,6 +20,16 @@ class ControlAdministrador extends CI_Controller
 			);
 
 		$this->load->view('Administrador/indexAdministrador',$data);
+	}
+
+	public function obtCalificaciones(){
+		$data = array(
+			'nombreAlumno'=>$this->input->post('nombreAlumno'),
+			'numeroCuenta'=>$this->input->post('numeroCuenta')
+			);
+		$regreso = 
+		$this->Alumno->obtCalificacion($data);
+		echo json_encode($regreso);
 	}
 
 }

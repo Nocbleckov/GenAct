@@ -77,8 +77,6 @@ defined('BASEPATH') OR exit('Acceso directo no disponible');
 
 	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
 
-	<script type="text/javascript" src="<?php echo base_url('assets/js/Administrador.js'); ?>"></script>
-
 	<script type="text/javascript">
 		var base_url = '<?php echo base_url(); ?>';
 		$(document).ready(function(){

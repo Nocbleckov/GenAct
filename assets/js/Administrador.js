@@ -3,7 +3,8 @@ function inicio(){
 }
 
 function onClickBuscarAlumno(){
-	$('#btnBuscarAlumno').click(function(){
+	alert($('#btnBuscarAlumno001').val());
+	$('#btnBuscarAlumno001').click(function(){
 		var nombreAlumno = $('#nombreAlumno').val();
 		var numeroCuenta = $('#numeroCuenta').val();
 

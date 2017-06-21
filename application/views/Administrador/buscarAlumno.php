@@ -31,15 +31,10 @@ defined('BASEPATH') OR exit('Acceso directo no disponible');
 		</div>
 	</div>
 	<div class="form-group center-block text-center">
-		<button type="button" class="btn btn-success" id="btnBuscarAlumno">
+		<button type="button" class="btn btn-success" id="btnBuscarAlumno001">
 			Buscar
 		</button>
 	</div>
 
-	<script type="text/javascript" src="<?php echo base_url('assets/js/Administrador.js'); ?>"></script>
-
-	<script type="text/javascript">
-		inicio
-	</script>
 
 </div>

@@ -16,13 +16,25 @@ class ControlAdministrador extends CI_Controller
 			'nombreUsuario'=>$this->input->post('nombreUsuarioData'),
 			'nombreIngreso'=>$this->input->post('nombreIngresoData'),
 			'privilegios'=>$this->input->post('privilegiosData'),
-			'buscarAlumno'=>$this->load->view('Administrador/buscarAlumno',NULL,TRUE),
+			'buscarAlumno'=>$this->load->view('BuscarAlumno/buscarAlumno',NULL,TRUE),
 			);
 
 		$this->load->view('Administrador/indexAdministrador',$data);
 	}
 
+
+	public function vistaRes(){
+
+		$data = $this->input->post();
+
+		$regreso = $this->load->view('BuscarAlumno/mostrarResultado',$data,TRUE);
+
+		echo $regreso;
+
+	}
+
 	public function obtCalificaciones(){
+
 		$data = array(
 			'nombreAlumno'=>$this->input->post('nombreAlumno'),
 			'numeroCuenta'=>$this->input->post('numeroCuenta')
@@ -31,6 +43,8 @@ class ControlAdministrador extends CI_Controller
 		$this->Alumno->obtCalificacion($data);
 		echo json_encode($regreso);
 	}
+
+
 
 }
 

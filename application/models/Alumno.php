@@ -21,9 +21,10 @@ class Alumno extends CI_Model{
 
 		$regreso = $this->db->get();*/
 
-		$query = "SELECT *FROM alumno_laboratorio AS al INNER JOIN alumno AS a ON al.idAlumno = a.idAlumno INNER JOIN laboratorio AS l ON al.idLaboratorio = l.idLaboratorio WHERE a.nombreAlumno = '".$data['nombreAlumno']."' AND a.numeroCuenta = '".$data['numeroCuenta']."' ";
-
+		$query = "SELECT al.calificacion, a.nombreAlumno, a.numeroCuenta ,l.nombreLaboratorio,l.numeroLaboratorio, al.semestre  FROM alumno_laboratorio AS al INNER JOIN alumno AS a ON al.idAlumno = a.idAlumno INNER JOIN laboratorio AS l ON al.idLaboratorio = l.idLaboratorio WHERE a.nombreAlumno = '".$data['nombreAlumno']."' AND a.numeroCuenta = '".$data['numeroCuenta']."';";
+		
 		$regreso = $this->db->query($query);
+		
 
 		/*echo var_dump($regreso->result_array());
 

@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('Acceso directo no disponible');
 					<div class="container">
 						<?php echo $buscarAlumno; ?>
 					</div>
-					<div class="container">
+					<div id="alumRes" class="container">
 						
 					</div>
 				</div>
